@@ -12,6 +12,9 @@
     top: 18px;
     right: 0;
     cursor: pointer;
+    transition: all 0.3s;
+    border: 1px solid black;
+    z-index: 5;
 
     @media (max-width: 435px) {
         right: 0;
@@ -20,12 +23,17 @@
 }
 
 .checkbox__input {
-    // display: none;
+    display: none;
 }
 
 .checkbox__input {
     &:checked ~ .checkbox__div {
         background-color: #fff;
+    }
+    &:checked ~ .checkbox__div::before {
+        background-color: #111;
+        right: 0;
+        left: 51px;
     }
 }
 
@@ -38,4 +46,5 @@
     height: 46px;
     background-color: #fff;
     border-radius: 50%;
+    transition: all 0.5s;
 }

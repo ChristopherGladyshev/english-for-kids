@@ -1,4 +1,5 @@
 const menu = document.querySelector(".burger-menu");
+
 export const burgerMenu = {
     toggleMenu(event) {
         if (event.classList == "burger-menu__button" || event.classList == "burger-menu__lines") {
