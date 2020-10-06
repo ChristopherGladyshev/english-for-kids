@@ -1,13 +1,12 @@
 .burger-menu__button {
-    position: fixed;
+    position: relative;
     z-index: 30;
     width: 60px;
     height: 60px;
+    display: block;
     border-radius: 50%;
     background-color: #111;
-    margin: 10px;
-    top: 0;
-    left: 220px;
+    margin: 0px;
     transition: all 0.7s;
 
     &:hover .burger-menu__lines {
@@ -26,7 +25,7 @@
 .burger-menu__lines::before {
     position: absolute;
     width: 40px;
-    height: 4px;
+    height: 7px;
     background-color: #fff;
     transition: all 0.3s;
     border-radius: 2px;

@@ -1,5 +1,8 @@
 .checkbox {
-    width: 100%;
+    display: block;
+    position: relative;
+    width: 103px;
+    height: 50px;
 }
 
 .checkbox__div {
@@ -9,8 +12,6 @@
     height: 50px;
     border-radius: 25px;
     background-color: #111;
-    top: 18px;
-    right: 0;
     cursor: pointer;
     transition: all 0.3s;
     border: 1px solid black;
@@ -20,6 +21,10 @@
         right: 0;
         left: 20px;
     }
+
+    &:hover {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
 }
 
 .checkbox__input {
@@ -27,10 +32,11 @@
 }
 
 .checkbox__input {
-    &:checked ~ .checkbox__div {
+    &:checked~.checkbox__div {
         background-color: #fff;
     }
-    &:checked ~ .checkbox__div::before {
+
+    &:checked~.checkbox__div::before {
         background-color: #111;
         right: 0;
         left: 51px;
