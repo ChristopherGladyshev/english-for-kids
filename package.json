@@ -16,7 +16,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Net-zen/webpack-boilerplate.git"
+    "url": ""
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
