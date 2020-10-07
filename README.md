@@ -1,7 +1,8 @@
-### english-for-kids
+## english-for-kids
 
-    * [Реализованное приложение](https://web-mralderson.github.io/english-for-kids/)
-    * [dev-branch](https://github.com/web-mrAlderson/english-for-kids/tree/dev)
+*[Реализованное приложение](https://web-mralderson.github.io/english-for-kids/)
+
+*[dev-branch](https://github.com/web-mrAlderson/english-for-kids/tree/dev)
 
 ## Описание страниц
 
