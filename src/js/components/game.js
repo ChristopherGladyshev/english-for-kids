@@ -65,7 +65,6 @@ export const checkedGame = {
         ! function (params) {
             const cardWrapper = document.querySelectorAll(".card-wrapper");
             cardWrapper.forEach((element) => {
-                console.log(element)
                 element.classList.remove('blur')
             });
         }();
@@ -85,7 +84,6 @@ export const checkedGame = {
 
             if (event.parentNode.children[0].children[1].children[1].innerText == textCards[counter]) {
                 counter++;
-                console.log(counter);
                 singRandom(textCards, counter);
                 this.starAdd(true);
                 event.classList.add("blur");
