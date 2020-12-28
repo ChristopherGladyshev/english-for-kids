@@ -8,4 +8,4 @@ export const burgerMenu = {
             menu.classList.toggle('burger-menu__active');
         }
     }
-}
+};

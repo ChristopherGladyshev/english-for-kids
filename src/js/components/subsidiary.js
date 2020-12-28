@@ -11,7 +11,7 @@ export const singRandom = (arr, index) => {
 };
 
 export const sing = (text) => {
-    let audio = new Audio();
+    const audio = new Audio();
     audio.src = `audio/${text}.mp3`;
     audio.autoplay = true;
     return audio;

@@ -1,13 +1,28 @@
 import '../sass/style.css';
 import '../sass/style.scss';
 
-import { cards } from "./cards";
-import { burgerMenu } from "./components/burger__menu";
-import { createNav } from "./components/nav";
-import { cardEvent } from "./components/card";
-import { checkedGame } from "./components/game";
-import { elementHidden } from "./components/subsidiary";
-import { preloader, check } from "./components/constants";
+import {
+  cards
+} from "./cards";
+import {
+  burgerMenu
+} from "./components/burger__menu";
+import {
+  createNav
+} from "./components/nav";
+import {
+  cardEvent
+} from "./components/card";
+import {
+  checkedGame
+} from "./components/game";
+import {
+  elementHidden
+} from "./components/subsidiary";
+import {
+  preloader,
+  check
+} from "./components/constants";
 
 
 cards.then(data => {
@@ -16,7 +31,7 @@ cards.then(data => {
   setTimeout(() => {
     elementHidden(preloader);
   }, 1000);
- 
+
 
   document.addEventListener('click', (event) => {
     const element = event.target;
@@ -34,6 +49,7 @@ cards.then(data => {
   function clickNav(event) {
     if (event.target.classList == 'burger-menu__link') {
 
+      // eslint-disable-next-line default-case
       switch (event.target.innerText) {
         case "ACTION (SET A)":
           cardEvent.create__cards(data, 1);
