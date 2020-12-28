@@ -1,11 +1,8 @@
+import { sing } from "./subsidiary";
+
+
 export const cardEvent = {
     elements: {
-        sing: (text) => {
-            let audio = new Audio();
-            audio.src = `audio/${text}.mp3`;
-            audio.autoplay = true;
-            return audio;
-        },
         articel: document.getElementById('a'),
         cards: '',
     },
@@ -66,7 +63,7 @@ export const cardEvent = {
     autoplay(event, check) {
         if (event.classList == "card-wrapper" && check.checked !== true) {
             let textCard = event.parentNode.children[0].children[1].children[1].innerText;
-            this.elements.sing(textCard);
+            sing(textCard);
         }
     }
 
