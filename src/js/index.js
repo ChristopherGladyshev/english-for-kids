@@ -1,63 +1,37 @@
 import '../sass/style.css';
 import '../sass/style.scss';
 
-import {
-  cards
-} from "./cards";
-import {
-  burgerMenu
-} from "./components/burger__menu";
-import {
-  createNav
-} from "./components/nav";
-import {
-  cardEvent
-} from "./components/card";
-
-import {
-  checkedGame
-} from "./components/game";
+import { cards } from "./cards";
+import { burgerMenu } from "./components/burger__menu";
+import { createNav } from "./components/nav";
+import { cardEvent } from "./components/card";
+import { checkedGame } from "./components/game";
+import { elementHidden } from "./components/subsidiary";
+import { preloader, check } from "./components/constants";
 
 
-const elementHidden = (HTML__Element) =>{
-  HTML__Element.style.display = "none";
-}
+cards.then(data => {
+  createNav.create(data);
+  cardEvent.create__cards(data, 1);
+  setTimeout(() => {
+    elementHidden(preloader);
+  }, 1000);
+ 
 
-const data = null;
-const check = document.getElementById('check');
-const preloader = document.querySelector('.preloader-wrapper');
-
-
-
-cards.then(dataCard => {
-  createNav.create(dataCard);
-  cardEvent.create__cards(dataCard, 1);
-  elementHidden(preloader);
-});
-
-
-  
-
-
-
-
-
-document.addEventListener('click', (event) => {
-  cards.then(data => {
-    burgerMenu.toggleMenu(event.target);
-    cardEvent.translete(event.target);
-    cardEvent.autoplay(event.target, check);
+  document.addEventListener('click', (event) => {
+    const element = event.target;
+    burgerMenu.toggleMenu(element);
+    cardEvent.translete(element);
+    cardEvent.autoplay(element, check);
     clickNav(event);
-    checkedGame.check(event.target, check);
-    checkedGame.game(event.target);
+    checkedGame.check(element, check);
+    checkedGame.game(element);
   });
-});
 
 
 
 
-function clickNav(event) {
-  cards.then(data => {
+  function clickNav(event) {
     if (event.target.classList == 'burger-menu__link') {
 
       switch (event.target.innerText) {
@@ -87,9 +61,9 @@ function clickNav(event) {
           break;
       }
     }
-  });
-}
+  }
 
-function checkFALSE() {
-  check.checked = false;
-}
+  function checkFALSE() {
+    check.checked = false;
+  }
+});

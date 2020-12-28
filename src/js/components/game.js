@@ -1,11 +1,13 @@
+import { articel, star, check, gameOver} from "./constants";
+import { shuffle, singRandom }from  "./subsidiary";
+
+
 let arrCards = null;
 let textCards = [];
 let card = [];
-const articel = document.getElementById('a');
-const star = document.querySelector('.wrapper__star');
+
 let counter = 0;
-const gameOver = document.querySelector('#gameOver');
-const check = document.getElementById('check');
+
 
 export const checkedGame = {
     elements: {
@@ -42,10 +44,7 @@ export const checkedGame = {
                     textCards.push(element.front.children[1].children[1].innerText);
                 });
 
-
-
                 shuffle(arrCards);
-
 
                 articel.innerHTML = '';
                 arrCards.forEach((elem) => {
@@ -133,15 +132,5 @@ export const checkedGame = {
             gameOver.innerText = `You have ${counterStar - 8} mistakes, please try again`;
         }
     },
-
-
 }
 
-function singRandom(arr, index) {
-    checkedGame.elements.sing(arr[index]);
-
-}
-
-function shuffle(array) {
-    return array.sort(() => Math.random() - 0.5);
-}
