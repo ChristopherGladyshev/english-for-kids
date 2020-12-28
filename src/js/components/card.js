@@ -9,9 +9,9 @@ export const cardEvent = {
         articel: document.getElementById('a'),
         cards: '',
     },
-    create_HTML_card({ word, translation, image, audioSrc }) {
-        let index = image.indexOf('/')
-        let altText = image.slice(index + 1, image.length - 4);
+    create_HTML_card({ word, translation, image }) {
+        const index = image.indexOf('/')
+        const altText = image.slice(index + 1, image.length - 4);
 
         return `<div class="card">
                         <div class="front">
