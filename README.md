@@ -1,8 +1,17 @@
 ### english-for-kids
 
-    * [Реализованное приложение](https://web-mralderson.github.io/english-for-kids/)
-    * [dev-branch](https://github.com/web-mrAlderson/english-for-kids/tree/dev)
+[Реализованное приложение](https://web-mralderson.github.io/english-for-kids/)
 
+[dev-branch](https://github.com/web-mrAlderson/english-for-kids/tree/dev)
+
+
+## Для старта 
+1. npm i   
+- установит необходимые зависимости 
+2. npm run dev
+- стартанет приложение в дев режиме на port:3000
+3. npm run build
+- соберет прод
 ## Описание страниц
 
 1. Главная страница приложения
